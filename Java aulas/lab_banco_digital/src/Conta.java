@@ -9,7 +9,7 @@ public abstract class Conta implements IConta {
 	protected int numero;
 	protected double saldo;
 	protected Cliente cliente;
-
+	
 	public Conta(Cliente cliente) {
 		this.agencia = Conta.AGENCIA_PADRAO;
 		this.numero = SEQUENCIAL++;
@@ -17,15 +17,12 @@ public abstract class Conta implements IConta {
 	}
 
 	@Override
-	public boolean sacar(double valor) {
-        if (valor <= saldo) {
+	public void sacar(double valor) {
+       
+		if (valor <= saldo) {
             saldo -= valor;
-            return true; // Saque bem-sucedido
-        } 
-		else {
-            System.out.println("Saldo insuficiente para realizar o saque.");
-            return false; // Saque não realizado
-        }
+         // Saque bem-sucedido(
+		}
 	}
 	
 	@Override
@@ -37,7 +34,7 @@ public abstract class Conta implements IConta {
 	public void transferir(double valor, IConta contaDestino) {
 		 if (this instanceof ContaCorrente) {
             ContaCorrente cc = (ContaCorrente) this;
-            if (saldo + cc.getLimiteAtual() >= valor) {
+            if (saldo + cc.getLimiteAtual(valor) >= valor) {
                 saldo -= valor;
                 contaDestino.depositar(valor);
             } else {

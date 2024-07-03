@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ContaCorrente extends Conta {
 	private static double LIMITE_BASE = 500.0;
-	private double limiteAtual;
+	public double limiteAtual;
 	
 	public ContaCorrente(Cliente cliente) {
 		super(cliente);
@@ -13,9 +13,7 @@ public class ContaCorrente extends Conta {
 	public double getLimiteBase() {
 		return LIMITE_BASE;
 	}
-	public double getLimiteAtual() {
-		return limiteAtual;
-	}
+
 	private double calcularLimite() {
 		Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
         
@@ -28,13 +26,22 @@ public class ContaCorrente extends Conta {
 			}
 
 			else{
-				System.out.println("Cliente sem restrições limite liberado: 500 unidades de dinheiro.");
-				saldo += LIMITE_BASE;
-				return LIMITE_BASE ;
+				System.out.println("Cliente sem restrições limite liberado: " + LIMITE_BASE +" unidades de dinheiro");
+				limiteAtual = LIMITE_BASE ;
+				return limiteAtual;
 			}
 
 	}
-
+	
+	public double getLimiteAtual(double valor) {
+		if (valor<=(saldo + limiteAtual)) {
+			double diferenca = valor - saldo;
+			limiteAtual-=diferenca;
+			System.out.println("Saque realizado a partir do limite.");
+			//saque do limite 
+		}
+	return limiteAtual;
+	}
 
 	@Override
 	public void imprimirExtrato() {
