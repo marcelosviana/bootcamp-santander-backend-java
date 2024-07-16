@@ -1,0 +1,142 @@
+
+-----------------------------------------<Cocdigo mermaid>----------------------------
+
+classDiagram
+    class Produto {
+        -String id
+        -String nome
+        -String descricao
+        -double preco
+        -int estoque
+        +void adicionarEstoque(int quantidade)
+        +void removerEstoque(int quantidade)
+    }
+
+    class Pedido {
+        -String id
+        -Date data
+        -Cliente cliente
+        -List<ItemPedido> itens
+        -double total
+        +void calcularTotal()
+        +void adicionarItem(Produto produto, int quantidade)
+        +void removerItem(Produto produto)
+    }
+
+    class ItemPedido {
+        -Produto produto
+        -int quantidade
+        -double preco
+        +double calcularSubtotal()
+    }
+
+    class Cliente {
+        -String id
+        -String nome
+        -String email
+        -String endereco
+        -List<Pedido> pedidos
+        -Carrinho carrinho
+        +void fazerPedido(Pedido pedido)
+        +void adicionarAoCarrinho(Produto produto, int quantidade)
+        +void removerDoCarrinho(Produto produto)
+   }
+   
+    class Carrinho {
+        -Cliente cliente
+        -List<ItemPedido> itens
+        +void adicionarItem(Produto produto, int quantidade)
+        +void removerItem(Produto produto)
+        +void esvaziar()
+        +double calcularTotal()
+    }
+
+    Produto "1" -- "0..*" ItemPedido : contém >
+    Pedido "1" -- "0..*" ItemPedido : contém >
+    Cliente "1" -- "0..*" Pedido : faz >
+    Cliente "1" -- "1" Carrinho : possui >
+    Carrinho "1" -- "0..*" ItemPedido : contém >
+    
+    
+-----------------------------------------</Cocdigo mermaid>----------------------------
+
+
+
+--------------------------------------------<Descrição>--------------------------------
+
+Classe Produto:
+
+Atributos:
+id: String
+nome: String
+descricao: String
+preco: double
+estoque: int
+Métodos:
+adicionarEstoque(int quantidade): void
+removerEstoque(int quantidade): void
+--------------------------------------------
+Classe Pedido:
+
+Atributos:
+id: String
+data: Date
+cliente: Cliente
+itens: List<ItemPedido>
+total: double
+Métodos:
+calcularTotal(): void
+adicionarItem(Produto produto, int quantidade): void
+removerItem(Produto produto): void
+--------------------------------------------
+Classe ItemPedido:
+
+Atributos:
+produto: Produto
+quantidade: int
+preco: double
+Métodos:
+calcularSubtotal(): double
+--------------------------------------------
+Classe Cliente:
+
+Atributos:
+id: String
+nome: String
+email: String
+endereco: String
+pedidos: List<Pedido>
+carrinho: Carrinho
+Métodos:
+fazerPedido(Pedido pedido): void
+adicionarAoCarrinho(Produto produto, int quantidade): void
+removerDoCarrinho(Produto produto): void
+--------------------------------------------
+Classe Carrinho:
+
+Atributos:
+cliente: Cliente
+itens: List<ItemPedido>
+Métodos:
+adicionarItem(Produto produto, int quantidade): void
+removerItem(Produto produto): void
+esvaziar(): void
+calcularTotal(): double
+
+##############################################
+
+Relacionamentos:
+Produto contém vários ItemPedido.
+Pedido contém vários ItemPedido.
+Cliente faz vários Pedidos.
+Funcionario processa vários Pedidos.
+
+
+Como visualizar:
+Para visualizar este diagrama, você pode usar ferramentas que suportam Mermaid, como o Mermaid Live Editor. Basta copiar o código acima e colá-lo no editor.
+
+
+--------------------------------------------</Descrição>--------------------------------
+
+
+
