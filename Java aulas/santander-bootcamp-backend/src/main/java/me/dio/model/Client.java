@@ -1,16 +1,16 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name = "tb_cliente")
-public class Cliente {
+@Entity(name = "tb_cliente")
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String clientId;
     private String nome;
     private String email;
     private String endereco;
@@ -69,5 +69,13 @@ public class Cliente {
 
     public void setCarrinho(Carrinho carrinho) {
         this.carrinho = carrinho;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 }

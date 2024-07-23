@@ -1,0 +1,1 @@
+web: java-jar Java aulas/santander-bootcamp-backend/build/libs/santander-bootcamp-backend-0.0.1-SNAPSHOT.jar

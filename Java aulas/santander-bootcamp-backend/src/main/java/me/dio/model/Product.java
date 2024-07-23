@@ -1,10 +1,10 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 
-@Entity(name = "tb_produto")
-public class Produto {
+@Entity(name = "tb_produt")
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

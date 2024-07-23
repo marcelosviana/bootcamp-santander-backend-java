@@ -1,4 +1,4 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
@@ -17,7 +17,7 @@ public class Pedido {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id", referencedColumnName = "id")
-    private Cliente cliente;
+    private Client cliente;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "pedido")
     private List<ItemPedido> itens;
@@ -42,11 +42,11 @@ public class Pedido {
         this.data = data;
     }
 
-    public Cliente getCliente() {
+    public Client getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(Client cliente) {
         this.cliente = cliente;
     }
 

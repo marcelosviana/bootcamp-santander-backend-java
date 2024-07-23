@@ -1,4 +1,4 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
@@ -13,7 +13,7 @@ public class ItemPedido {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produto_id", referencedColumnName = "id")
-    private Produto produto;
+    private Product produto;
 
     private int quantidade;
 
@@ -37,11 +37,11 @@ public class ItemPedido {
         this.id = id;
     }
 
-    public Produto getProduto() {
+    public Product getProduto() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setProduto(Product produto) {
         this.produto = produto;
     }
 

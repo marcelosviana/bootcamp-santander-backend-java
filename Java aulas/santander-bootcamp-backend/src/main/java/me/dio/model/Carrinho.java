@@ -1,4 +1,4 @@
-package me.dio.domain.model;
+package me.dio.model;
 
 import jakarta.persistence.*;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Carrinho {
     private Long id;
 
     @OneToOne(mappedBy = "carrinho", fetch = FetchType.LAZY)
-    private Cliente cliente;
+    private Client cliente;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "carrinho")
     private List<ItemPedido> itens;
@@ -26,11 +26,11 @@ public class Carrinho {
         this.id = id;
     }
 
-    public Cliente getCliente() {
+    public Client getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(Client cliente) {
         this.cliente = cliente;
     }
 
