@@ -1,18 +1,41 @@
-## Getting Started
+# 💻 ContaTerminal – Projeto Java | Bootcamp Santander 2024
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+> Simulação de abertura de conta bancária via terminal com entrada de dados do usuário.
 
-## Folder Structure
+## 📌 Descrição
 
-The workspace contains two folders by default, where:
+O projeto **ContaTerminal** foi desenvolvido como parte do Bootcamp Santander 2024 – Backend com Java. Ele representa um exercício prático de interação com o usuário via terminal utilizando a linguagem Java.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+A aplicação simula a criação de uma conta bancária, capturando e exibindo dados como:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Nome completo do cliente
+- Número da agência
+- Número da conta
+- Saldo inicial
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Ao final, o sistema exibe uma mensagem de boas-vindas personalizada com os dados informados.
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 🧠 Conceitos Aplicados
+
+- ✔️ Entrada de dados com `Scanner`  
+- ✔️ Manipulação de `String`, `int` e `double`  
+- ✔️ Formatação de mensagens  
+- ✔️ Uso da classe `Locale`  
+- ✔️ Organização e boas práticas de código Java
+
+---
+
+## 🎯 Exemplo de execução
+
+Digite seu nome
+Marcelo Viana
+Por favor digite o numero da agencia
+1234
+Digite o numero da conta
+56789
+Digite seu saldo
+1000.50
+
+Olá Marcelo Viana, obrigado por criar uma conta em nosso banco, sua agência é 1234, conta 56789 e seu saldo 1000.5 já está disponível para saque
