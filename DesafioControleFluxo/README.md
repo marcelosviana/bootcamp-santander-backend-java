@@ -1,18 +1,27 @@
-## Getting Started
+# 🧮 Contador com Validação de Parâmetros - Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Projeto desenvolvido durante o Bootcamp Santander 2024 – Backend com Java.  
+O objetivo foi aplicar lógica de programação, laços de repetição, uso de `Scanner`, estrutura de controle `try/catch` e **exceção personalizada** em Java.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 📋 Descrição
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Este programa de terminal solicita dois números inteiros ao usuário:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. O primeiro parâmetro
+2. O segundo parâmetro
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Ele verifica se o **segundo número é maior que o primeiro**.  
+Se não for, uma exceção personalizada (`ParametrosInvalidosException`) é lançada.  
+Se for válido, o sistema imprime a contagem entre os dois valores.
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 🧠 O que foi praticado:
+
+- Estruturas de controle em Java (`if`, `for`, `try/catch`)
+- Manipulação de entrada de dados com `Scanner`
+- Implementação de **Exceções Personalizadas**
+- Lógica de contagem dinâmica
+- Boas práticas na estruturação de código Java
