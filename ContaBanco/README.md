@@ -30,12 +30,19 @@ Ao final, o sistema exibe uma mensagem de boas-vindas personalizada com os dados
 ## 🎯 Exemplo de execução
 
 Digite seu nome
+
 Marcelo Viana
+
 Por favor digite o numero da agencia
+
 1234
+
 Digite o numero da conta
+
 56789
 Digite seu saldo
+
 1000.50
+
 
 Olá Marcelo Viana, obrigado por criar uma conta em nosso banco, sua agência é 1234, conta 56789 e seu saldo 1000.5 já está disponível para saque
