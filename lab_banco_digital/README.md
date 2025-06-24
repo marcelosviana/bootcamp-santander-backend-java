@@ -1,18 +1,38 @@
-## Getting Started
+# 🏦 Projeto: Banco Digital com Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+> Simulação de um sistema bancário orientado a objetos, com múltiplos tipos de conta e regras de negócio aplicadas.
 
-## Folder Structure
+## 📌 Descrição
 
-The workspace contains two folders by default, where:
+Este projeto foi desenvolvido como parte do laboratório prático do Bootcamp Santander – Backend com Java. O objetivo é simular operações de um **Banco Digital**, utilizando os pilares da Programação Orientada a Objetos (POO) para representar contas, clientes e regras bancárias.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O sistema permite:
+- Criar um cliente e associá-lo a uma **Conta Corrente** e uma **Conta Poupança**;
+- Realizar **depósitos**, **saques** e **transferências** entre contas;
+- Aplicar **limite** de crédito na Conta Corrente com base em análise simulada;
+- Exibir **extratos formatados** com saldo e limite.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🧱 Arquitetura e Estrutura
 
-## Dependency Management
+- `Cliente`: Representa o titular da conta.
+- `Conta` (abstract): Classe base para contas bancárias, implementando a interface `IConta`.
+- `ContaCorrente`: Estende `Conta` com lógica de limite de crédito.
+- `ContaPoupanca`: Estende `Conta` com comportamento padrão de poupança.
+- `Banco`: Gerencia o nome do banco e as contas existentes.
+- `IConta`: Interface com os métodos `sacar`, `depositar`, `transferir` e `imprimirExtrato`.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## 🧠 Conceitos Aplicados
+
+- ✔️ Abstração
+- ✔️ Encapsulamento
+- ✔️ Herança
+- ✔️ Polimorfismo
+- ✔️ Interface
+- ✔️ Classes e Objetos
+- ✔️ Entrada e saída com Scanner
+
+
